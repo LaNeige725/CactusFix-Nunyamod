@@ -1,6 +1,6 @@
 ## FINALLY A CACTUS FIX FOR HYPIXEL WOOOHOOOOO!!!
 
-this is a mod made by someone who sucks at everything they touch.
+this is a mod made by someone who sucks at everything they touch. (that would be me, ig: JustNunya)
 
 good luck with any problems if you happen to any of them.
 
@@ -17,3 +17,5 @@ the proper use for the command is:
 
 so as an example, if I were to write /lbcalc 10 100, the command would return me "offer: 90" in chat.
 the lbcalc command also supports abbreviated use, so you can use k, m or b to shorten your numbers. (/lbcalc 10 10m = offer: 9,000,000)
+
+although I don't plan to add anything to this mod, feel free to add me on discord to discuss whatever (my discord id is nunyaneige)
