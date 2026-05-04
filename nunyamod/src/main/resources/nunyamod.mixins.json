@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "cactusfix.nunyamod.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"CactusHitboxMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

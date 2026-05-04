@@ -1,0 +1,60 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://libraries.minecraft.net/" }
+    mavenCentral()
+}
+
+loom {
+    // We are removing splitEnvironmentSourceSets() for this attempt
+    // to force Loom to merge the jars into one for the compiler.
+    
+    mods {
+        "nunyamod" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    
+    // In Loom 1.15 (April 2026), you no longer need to call intermediary() 
+    // inside the layered block; it is included by default.
+    mappings loom.layered() {
+        officialMojangMappings()
+    }
+    
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.name}"}
+    }
+}

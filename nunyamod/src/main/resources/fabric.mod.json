@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "nunyamod",
+	"version": "${version}",
+	"name": "CactusFix",
+	"description": "Calculates lowball offers and fixes cacti!",
+	"authors": [
+		"You"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/nunyamod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cactusfix.nunyamod.Nunyamod"
+		]
+	},
+	"mixins": [
+		"nunyamod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
