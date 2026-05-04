@@ -8,11 +8,10 @@ this mod includes a texture swap as well as a model swap of the cactus to be the
 
 <img width="1920" height="1017" alt="image" src="https://github.com/user-attachments/assets/2d271cd1-dc61-49f0-9c41-9dc152e76db8" />
 
-my friend convinced me to add a command to calculate for lowballing, it's also included inthe mod if you are inclined to use it, 
+my friend convinced me to add a command to calculate for lowballing, it's also included in the mod if you are inclined to use it, 
 the command is clientside so it shouldn't cause any problems regarding spamming.
 
 the proper use for the command is:
-
 /lbcalc <percentage you want reomved> <lbin or expected price of the item in question>
 
 so as an example, if I were to write /lbcalc 10 100, the command would return me "offer: 90" in chat.
